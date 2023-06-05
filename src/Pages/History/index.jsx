@@ -87,7 +87,9 @@ const History = () => {
                     </div>
 
                     <div className={styles.price}>
-                      <span>{item.price} MT</span>
+                      {item.type != 'consult' && (
+                        <span>{item.price} MT</span>
+                      )}
                       <div
                         style={{
                           backgroundColor:

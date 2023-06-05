@@ -20,6 +20,9 @@
   padding: 20px;
   background: var(--color-primary);
   color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .box_input {
   display: flex;

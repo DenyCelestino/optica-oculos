@@ -26,6 +26,9 @@
   background: var(--color-primary);
   color: var(--color-white);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .tips {
   display: flex;

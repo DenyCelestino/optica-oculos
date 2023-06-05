@@ -105,7 +105,7 @@ const Schedule = () => {
                 {isLoading ? (
                   <MoonLoader size={15} color="white" />
                 ) : (
-                  'Concluir pagamento'
+                  'Agendar consulta'
                 )}
               </button>
             </form>
