@@ -34,7 +34,7 @@ const Products = () => {
       <Wrapper>
         <h1>óculos de tendências para ti.</h1>
         <div className={styles.gleasses_container}>
-          {isLoading && <MoonLoader size={15} color="cyan" />}
+          {isLoading && <MoonLoader size={30} color="blue" />}
           {products.map((item, index) => (
             <Link
               to={`/product/${item.id}`}
