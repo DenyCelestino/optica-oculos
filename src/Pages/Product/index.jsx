@@ -165,7 +165,6 @@ const Product = () => {
         </Modal>
       )}
       <div className={styles.container}>
-        {isLoading && <MoonLoader size={30} color="blue" />}
         <Wrapper>
           <div className={styles.minimal_container}>
             <div className={styles.left_container}>
@@ -176,6 +175,7 @@ const Product = () => {
               >
                 <img src={ENDPOINT + product.image} />
               </div>
+              {isLoading && <MoonLoader size={30} color="blue" />}
             </div>
             {product && (
               <div className={styles.right_container}>
