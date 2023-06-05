@@ -47,7 +47,7 @@ const Header = () => {
           </ul>
           {handleMobile && (
             <ul className={styles.mobileMenu}>
-              <li>
+              {/* <li>
                 <Link>Promocao</Link>
               </li>
               <li>
@@ -55,7 +55,7 @@ const Header = () => {
               </li>
               <li>
                 <Link>Contacto</Link>
-              </li>
+              </li> */}
               <div className={styles.buttons}>
                 <Link to={'/history'} className={styles.button}>
                   <BsFillPersonFill />
