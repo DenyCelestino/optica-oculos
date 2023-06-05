@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 import MyContext from '../../../contexts/MyContext'
 import { toast } from 'react-toastify'
+import { MoonLoader } from 'react-spinners'
 
 const Products = () => {
   const { ENDPOINT } = useContext(MyContext)
@@ -33,6 +34,7 @@ const Products = () => {
       <Wrapper>
         <h1>óculos de tendências para ti.</h1>
         <div className={styles.gleasses_container}>
+          {isLoading && <MoonLoader size={15} color="cyan" />}
           {products.map((item, index) => (
             <Link
               to={`/product/${item.id}`}

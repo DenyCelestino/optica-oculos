@@ -165,6 +165,7 @@ const Product = () => {
         </Modal>
       )}
       <div className={styles.container}>
+        {isLoading && <MoonLoader size={15} color="cyan" />}
         <Wrapper>
           <div className={styles.minimal_container}>
             <div className={styles.left_container}>
