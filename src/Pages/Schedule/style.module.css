@@ -1,0 +1,45 @@
+.container {
+  padding-top: 80px;
+  font-size: 12px;
+}
+.minimal_container {
+  padding: 20px 0;
+  display: flex;
+}
+.left_container {
+  width: 50%;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.left_container input {
+  padding: 20px;
+  border-bottom: 1px solid #dcdcdc;
+}
+.left_container button {
+  padding: 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.box_input {
+  display: flex;
+  flex-direction: column;
+}
+.right_container {
+  width: 50%;
+}
+.right_container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .left_container {
+    width: 100%;
+    font-size: 12px;
+  }
+  .right_container {
+    display: none;
+  }
+}

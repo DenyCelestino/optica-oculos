@@ -1,0 +1,32 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 200;
+  height: 100vh;
+  overflow: hidden;
+}
+.modal{
+  margin: 0 auto;
+  width: 90%;
+  background: var(--color-white);
+  padding:20px 10px;
+  height: 450px;
+  max-height: 450px;
+  overflow-y: scroll;
+
+
+}
+.headerModal{
+  width: 100%;
+
+  padding: 5px;
+  display: flex;
+  justify-content: flex-end;
+}

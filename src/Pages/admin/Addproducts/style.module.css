@@ -1,0 +1,146 @@
+.container {
+  display: flex;
+  height: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: 20px;
+}
+.box {
+  height: 400px;
+  width: 280px;
+  background: var(--color-white);
+  box-shadow: -54px -19px 154px -84px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -54px -19px 154px -84px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: -54px -19px 154px -84px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+.image_container {
+  height: 50%;
+}
+.image_container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.description {
+  padding: 10px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.description p:nth-child(3) {
+  font-weight: bold;
+}
+.operators {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.icons {
+  cursor: pointer;
+  filter: grayscale(1);
+}
+.icons:hover {
+  cursor: pointer;
+  filter: grayscale(0);
+}
+.addproduct {
+  padding: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 8px;
+  position: absolute;
+  bottom: 40px;
+  right: 20px;
+  cursor: pointer;
+}
+.modal {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.content_modal {
+  margin: 0 auto;
+  background: var(--color-white);
+  padding: 10px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+.content_modal img {
+  height: 400px;
+  width: 400px;
+}
+.closeModal {
+  padding: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.closeOperator {
+  display: flex;
+  justify-content: flex-end;
+}
+input[type='file'] {
+  display: none;
+}
+.wrapper_modal {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.upload_file {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.content_to_upload {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.content_to_upload_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.content_to_upload_fields input {
+  padding: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  width: 100%;
+}
+.content_to_upload_fields textarea {
+  padding: 20px;
+  height: 200px;
+  border: 1px solid #dcdcdc;
+}
+.content_to_upload_fields button {
+  padding: 10px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  cursor: pointer;
+}

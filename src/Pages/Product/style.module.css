@@ -1,0 +1,135 @@
+.main_container {
+  display: flex;
+  height: 100vh;
+}
+.container {
+  padding-top: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+.minimal_container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+.left_container {
+  height: 100%;
+  width: 50%;
+}
+.right_container {
+  display: flex;
+  flex-direction: column;
+  height: 800px;
+  font-size: 12px;
+  width: 50%;
+  padding: 10px 40px;
+  gap: 20px;
+}
+.image_container {
+  height: 70%;
+  width: 100%;
+  overflow: hidden;
+}
+.image_container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+.image_container img:hover {
+  transform-origin: center;
+  transform: scale(1.2);
+}
+.info_container {
+  padding: 10px 0;
+  border-top: 1px solid #f4efef;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.info_container span {
+  font-size: 24px;
+  font-weight: bold;
+}
+.buy_button {
+  padding: 20px;
+  width: 40%;
+  border: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 10px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+.works {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: underline;
+  color: orange;
+}
+.quantity_contaienr {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.quantity_contaienr button {
+  padding: 10px 15px;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+.form button {
+  padding: 20px;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inputs {
+  padding: 10px;
+  background: #dcdcdc;
+  color: var(--color-black);
+}
+
+@media only screen and (max-width: 888px) {
+  .container {
+    overflow-y: scroll;
+  }
+  .minimal_container {
+    flex-direction: column;
+    font-size: 10px;
+    width: 100%;
+  }
+  .left_container,
+  .right_container {
+    width: 100%;
+  }
+  .info_container span {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .info_container {
+    padding: 0;
+    width: 100%;
+  }
+  .right_container {
+    padding: 0;
+    gap: 10px;
+  }
+
+  .buy_button {
+    width: 100%;
+  }
+  .form {
+    font-size: 12px;
+  }
+}
