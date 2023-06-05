@@ -374,6 +374,7 @@ const Addproducts = () => {
       )}
       <Wrapper>
         <div className={styles.content}>
+          {isLoading && <MoonLoader size={30} color="blue" />}
           {products.map((item, index) => (
             <div key={index} className={styles.box}>
               <div className={styles.image_container}>
