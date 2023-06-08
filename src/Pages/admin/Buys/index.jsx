@@ -113,11 +113,11 @@ const Buys = () => {
       <div className={styles.container}>
         <Wrapper>
           <h4>Compras</h4>
-          <p>
+          {/* <p>
             Todas as consultas aqui despostas sao consultas a serem
             feitas em uma data futura, os clientes proprietarios
             recebem notificacao 2 dias antecipadamente para o efeito.
-          </p>
+          </p> */}
           <input
             type="text"
             placeholder="Pesquisar compra pelo numero de bi"
