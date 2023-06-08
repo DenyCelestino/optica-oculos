@@ -5,7 +5,7 @@ const Copyright = () => {
   return (
     <Wrapper>
       <span className={styles.copyright}>
-       @2023 Oculos plus , todos os direitos reservados
+        @2023 Optica oculos , todos os direitos reservados
       </span>
     </Wrapper>
   )

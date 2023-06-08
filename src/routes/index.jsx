@@ -8,6 +8,8 @@ import History from '../Pages/History'
 import Login from '../Pages/admin/Login'
 import Dashboard from '../Pages/admin/Dashboard'
 import Addproducts from '../Pages/admin/Addproducts'
+import ListSchedule from '../Pages/admin/ListSchedule'
+import Buys from '../Pages/admin/Buys'
 const MainRoute = () => {
   return (
     <BrowserRouter>
@@ -17,6 +19,15 @@ const MainRoute = () => {
         <Route path="/schedule" exact element={<Schedule />} />
         <Route path="/history" exact element={<History />} />
         <Route path="/admin/login" exact element={<Login />} />
+        <Route
+          path="/admin/listschedule"
+          exact
+          element={
+            <Sidebar>
+              <ListSchedule />
+            </Sidebar>
+          }
+        />
         <Route
           path="/admin/dashboard"
           exact
@@ -32,6 +43,15 @@ const MainRoute = () => {
           element={
             <Sidebar>
               <Addproducts />
+            </Sidebar>
+          }
+        />
+        <Route
+          path="/admin/buys"
+          exact
+          element={
+            <Sidebar>
+              <Buys />
             </Sidebar>
           }
         />

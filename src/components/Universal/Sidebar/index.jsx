@@ -3,50 +3,67 @@ import styles from './style.module.css'
 import { Link } from 'react-router-dom'
 import { useContext } from 'react'
 import MyContext from '../../../contexts/MyContext'
-import Copyright from '../../../components/Copyright'
-
-const Sidebar = ({children}) => {
-
-const {currentRoute,setCurrentRoute} = useContext(MyContext)
+import Logo from '../../../assets/logo.jpg'
+const Sidebar = ({ children }) => {
+  const { currentRoute, setCurrentRoute } = useContext(MyContext)
 
   return (
     <div className={styles.container}>
-       <div className={styles.header}>
-          <h4>Oculos plus Admin</h4>
-        </div>
-        <div className={styles.screen}>
+      <div className={styles.header}>
+        <img src={Logo} />
+      </div>
+      <div className={styles.screen}>
         <div className={styles.sidebar}>
           <ul>
-           
-              <Link  to={'/admin/dashboard'} onClick={()=>setCurrentRoute('dashboard')} style={{backgroundColor:currentRoute=='dashboard'&&'#447BCD',color:currentRoute=='dashboard'&&'#FFF'}}>
+            <Link
+              to={'/admin/dashboard'}
+              onClick={() => setCurrentRoute('dashboard')}
+              style={{
+                backgroundColor:
+                  currentRoute == 'dashboard' && '#447BCD',
+                color: currentRoute == 'dashboard' && '#FFF'
+              }}
+            >
               Dashboard
-              </Link>
-           
-              <Link to={'/admin/addproducts'}  onClick={()=>setCurrentRoute('addproducts')} style={{backgroundColor:currentRoute=='addproducts'&&'#447BCD',color:currentRoute=='addproducts'&&'#FFF'}}>
+            </Link>
+
+            <Link
+              to={'/admin/addproducts'}
+              onClick={() => setCurrentRoute('addproducts')}
+              style={{
+                backgroundColor:
+                  currentRoute == 'addproducts' && '#447BCD',
+                color: currentRoute == 'addproducts' && '#FFF'
+              }}
+            >
               Produtos
-              </Link>
-       
-              <Link onClick={()=>setCurrentRoute('viewschedule')}  style={{backgroundColor:currentRoute=='viewschedule'&&'#447BCD',color:currentRoute=='viewschedule'&&'#FFF'}}>
+            </Link>
+
+            <Link
+              to={'/admin/listschedule'}
+              onClick={() => setCurrentRoute('listschedule')}
+              style={{
+                backgroundColor:
+                  currentRoute == 'listschedule' && '#447BCD',
+                color: currentRoute == 'listschedule' && '#FFF'
+              }}
+            >
               Consultas agendadas
-              </Link>
-              <Link onClick={()=>setCurrentRoute('sells')}  style={{backgroundColor:currentRoute=='sells'&&'#447BCD',color:currentRoute=='sells'&&'#FFF'}}>
+            </Link>
+            <Link
+              to={'/admin/buys'}
+              onClick={() => setCurrentRoute('buys')}
+              style={{
+                backgroundColor: currentRoute == 'buys' && '#447BCD',
+                color: currentRoute == 'buys' && '#FFF'
+              }}
+            >
               compras
-              </Link>
-        
-            
-              <Link onClick={()=>setCurrentRoute('clients')} style={{backgroundColor:currentRoute=='clients'&&'#447BCD',color:currentRoute=='clients'&&'#FFF'}}>
-              Clientes
-              </Link>
-       
+            </Link>
           </ul>
         </div>
-        <main>
- 
-         {children}
-   
-        </main>
-        </div>
-      
+        <main>{children}</main>
+      </div>
     </div>
   )
 }
